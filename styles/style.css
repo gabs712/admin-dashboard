@@ -1,0 +1,41 @@
+:root {
+  --grey: lightgrey;
+  --blue: rgb(95, 95, 255);
+  --white: white;
+  --yellow: yellow;
+}
+
+body {
+  font-family: 'Roboto';
+  background-color: var(--grey);
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas:
+  'sidebar header'
+  'sidebar content';
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 130px 1fr;
+}
+
+.sidebar {
+  background-color: var(--blue);
+  grid-area: sidebar;
+}
+
+.header {
+  grid-area: header;
+  background-color: var(--white);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.078);
+}
+
+.content {
+  grid-area: content;
+  display: grid;
+  grid-template-areas:
+  'projects announcements'
+  'projects trending';
+  grid-template-columns: 1fr 200px ;
+}
