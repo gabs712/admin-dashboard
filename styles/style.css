@@ -1,6 +1,6 @@
 :root {
   --grey: rgb(222, 222, 222);
-  --pink-purple: linear-gradient(135deg, #885DF1, #F65282);
+  --blue-purple: rgb(114, 114, 255);
   --white: white;
   --yellow: yellow;
 }
@@ -35,7 +35,7 @@ p {
 }
 
 .sidebar {
-  background: var(--pink-purple);
+  background: var(--blue-purple);
   grid-area: sidebar;
   display: grid;
   align-content: start;
@@ -54,12 +54,11 @@ p {
 
 div .brand {
   gap: 10px;
-  /* margin-left: -5px; */
 }
 
 div .brand-logo {
   width: 40px;
-  height: 40px;
+  height: auto;
 }
 
 a.brand-title {
@@ -239,7 +238,7 @@ a.brand-title {
 
 .inferior__right button {
   color: white;
-  background: var(--pink-purple);
+  background: var(--blue-purple);
   border: none;
   border-radius: 50px;
   padding: 6px 25px;
