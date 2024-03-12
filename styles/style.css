@@ -155,12 +155,12 @@ a.brand-title {
 }
 
 .header__profile-picture {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   cursor: pointer;
   object-fit: cover;
-  object-position: top right;
+  object-position: top;
 }
 
 .header__user-name {
@@ -253,18 +253,25 @@ a.brand-title {
 
   grid-area: content;
   display: grid;
+  gap: 30px 10px;
   grid-template-areas:
   'projects announcements'
   'projects trending';
   grid-template-columns: 1fr 250px ;
-  grid-template-rows: auto auto;
   padding: 30px 20px;
   border: 3px solid rgb(30, 0, 255);
+
+  overflow: auto;
+  will-change: transform;
+}
+
+.grid {
+  grid-area: projects;
 }
 
 .announcements {
+  grid-area: announcements;
   display: grid;
-  align-content: start;
   gap: 8px;
 }
 
@@ -282,12 +289,12 @@ hr {
   border-radius: 10px;
 
   display: grid;
-  gap: 15px
+  gap: 20px;
 }
 
 .aside-card-section {
   display: grid;
-  gap: 5px;
+  gap: 10px;
 }
 
 .aside-card-label {
@@ -300,3 +307,10 @@ hr {
   font-size: .7rem;
   color: var(--grey);
 }
+
+.trending {
+  grid-area: trending;
+  display: grid;
+  gap: 8px;
+}
+
