@@ -1,6 +1,6 @@
 :root {
   --grey: rgb(222, 222, 222);
-  --blue-purple: rgb(114, 114, 255);
+  --main-color: rgb(90 172 185);
   --white: white;
   --yellow: yellow;
 }
@@ -15,13 +15,14 @@ p {
 }
 
 .wrapper {
-  min-height: 100vh;
+  height: 100svh;
   display: grid;
   grid-template-areas:
   'sidebar header'
   'sidebar content';
   grid-template-columns: auto 1fr;
   grid-template-rows: auto 1fr;
+  border: 2px solid red;
 }
 
 @media(max-width: 769px) {
@@ -35,7 +36,7 @@ p {
 }
 
 .sidebar {
-  background: var(--blue-purple);
+  background: var(--main-color);
   grid-area: sidebar;
   display: grid;
   align-content: start;
@@ -159,7 +160,7 @@ a.brand-title {
   border-radius: 50%;
   cursor: pointer;
   object-fit: cover;
-  object-position: center
+  object-position: top right;
 }
 
 .header__user-name {
@@ -207,7 +208,7 @@ a.brand-title {
   height: 50px;
   border-radius: 50%;
   object-fit: cover;
-  object-position: center;
+  object-position: top right;
 }
 
 .inferior__title {
@@ -238,7 +239,7 @@ a.brand-title {
 
 .inferior__right button {
   color: white;
-  background: var(--blue-purple);
+  background: var(--main-color);
   border: none;
   border-radius: 50px;
   padding: 6px 25px;
@@ -248,12 +249,54 @@ a.brand-title {
 }
 
 .content {
+  --grey: #808080;
+
   grid-area: content;
   display: grid;
   grid-template-areas:
   'projects announcements'
   'projects trending';
-  grid-template-columns: 1fr auto ;
-  grid-template-rows: 1fr auto;
+  grid-template-columns: 1fr 250px ;
+  grid-template-rows: auto auto;
+  padding: 30px 20px;
+  border: 3px solid rgb(30, 0, 255);
 }
 
+.announcements {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+}
+
+.label {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+hr {
+  margin: 0;
+}
+.aside-card {
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 10px;
+
+  display: grid;
+  gap: 15px
+}
+
+.aside-card-section {
+  display: grid;
+  gap: 5px;
+}
+
+.aside-card-label {
+  font-weight: bold;
+  font-size: .9rem;
+}
+
+
+.aside-card-text {
+  font-size: .7rem;
+  color: var(--grey);
+}
