@@ -42,6 +42,8 @@ p {
   align-content: start;
   padding: 15px;
   gap: 50px;
+
+  overflow: auto;
 }
 
 .icon, .description {
@@ -182,9 +184,6 @@ a.brand-title {
   .header__inferior {
     flex-wrap: wrap;
     justify-content: center;
-  }
-
-  .inferior__right {
   }
 }
 
