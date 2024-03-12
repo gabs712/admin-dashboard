@@ -97,8 +97,15 @@ a.brand-title {
 .header__superior {
   display: flex;
   justify-content: space-between;
-  gap: 40px;
+  gap: 15px 40px;
 
+}
+
+@media(max-width: 470px) {
+  .header__superior {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+  }
 }
 
 .header__input {
@@ -122,6 +129,8 @@ a.brand-title {
   border-radius: 50px;
   height: 25px;
   width: 80px;
+  padding: 0 10px;
+  font-size: 0.8rem;
   flex: 1;
 }
 
@@ -164,13 +173,32 @@ a.brand-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 5px;
+  gap: 20px 5px;
+}
+
+@media(max-width: 665px) {
+  .header__inferior {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .inferior__right {
+  }
 }
 
 .inferior__left {
   display: flex;
   align-items: center;
   gap: 15px;
+}
+
+@media(max-width: 450px) {
+  .inferior__right {
+    flex-wrap: wrap;
+  }
+  .inferior__right > * {
+    flex: 1;
+  }
 }
 
 .inferior__picture {
