@@ -20,15 +20,69 @@ p {
   grid-template-areas:
   'sidebar header'
   'sidebar content';
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: auto 1fr;
   grid-template-rows: auto 1fr;
+}
+
+@media(max-width: 769px) {
+  .description {
+    display: none;
+  }
+
+  .item-group {
+    justify-items: center;
+  }
 }
 
 .sidebar {
   background-color: var(--blue);
   grid-area: sidebar;
-
+  display: grid;
+  align-content: start;
+  padding: 15px;
+  gap: 50px;
 }
+
+.icon, .description {
+  cursor: pointer;
+}
+
+.item-group {
+  display: grid;
+  gap: 13px;
+}
+
+div .brand {
+  gap: 3px;
+}
+
+div .brand-logo {
+  width: 40px;
+  height: 40px;
+}
+
+a.brand-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.item {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.description {
+  color: var(--white);
+  text-decoration: none;
+}
+
+
 
 .header {
   grid-area: header;
@@ -161,6 +215,7 @@ p {
   padding: 6px 25px;
   font-size: .9rem;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .content {
