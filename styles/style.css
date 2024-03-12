@@ -1,13 +1,13 @@
 :root {
   --grey: rgb(222, 222, 222);
-  --blue: rgb(95, 95, 255);
+  --pink-purple: linear-gradient(135deg, #885DF1, #F65282);
   --white: white;
   --yellow: yellow;
 }
 
 body {
   font-family: 'Roboto', Helvetica, arial, sans-serif;
-  background-color: var(--grey);
+  background: var(--grey);
 }
 
 p {
@@ -35,7 +35,7 @@ p {
 }
 
 .sidebar {
-  background-color: var(--blue);
+  background: var(--pink-purple);
   grid-area: sidebar;
   display: grid;
   align-content: start;
@@ -53,7 +53,8 @@ p {
 }
 
 div .brand {
-  gap: 3px;
+  gap: 10px;
+  /* margin-left: -5px; */
 }
 
 div .brand-logo {
@@ -73,20 +74,21 @@ a.brand-title {
 }
 
 .icon {
-  width: 20px;
-  height: 20px;
+  width: 23px;
+  height: 23px;
 }
 
 .description {
   color: var(--white);
   text-decoration: none;
+  font-weight: bold;
 }
 
 
 
 .header {
   grid-area: header;
-  background-color: var(--white);
+  background: var(--white);
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.078);
   padding: 10px 30px;
 
@@ -104,7 +106,7 @@ a.brand-title {
 @media(max-width: 470px) {
   .header__superior {
     flex-wrap: wrap-reverse;
-    justify-content: center;
+    justify-content: start;
   }
 }
 
@@ -124,7 +126,7 @@ a.brand-title {
 }
 
 .header__input input{
-  background-color: var(--grey);
+  background: var(--grey);
   border: none;
   border-radius: 50px;
   height: 25px;
@@ -237,7 +239,7 @@ a.brand-title {
 
 .inferior__right button {
   color: white;
-  background-color: var(--blue);
+  background: var(--pink-purple);
   border: none;
   border-radius: 50px;
   padding: 6px 25px;
@@ -252,5 +254,7 @@ a.brand-title {
   grid-template-areas:
   'projects announcements'
   'projects trending';
-  grid-template-columns: 3fr 1fr ;
+  grid-template-columns: 1fr auto ;
+  grid-template-rows: 1fr auto;
 }
+
