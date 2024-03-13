@@ -1,8 +1,9 @@
 :root {
-  --grey: rgb(222, 222, 222);
-  --main-color: rgb(90 172 185);
+  --grey: #e8eaed;
+  --main-color: rgb(91, 180, 194);
   --white: white;
   --yellow: yellow;
+  --grey-text: #808080;
 }
 
 body {
@@ -12,6 +13,10 @@ body {
 
 p {
   margin: 0;
+}
+
+img {
+  flex: none;
 }
 
 .wrapper {
@@ -100,7 +105,7 @@ a.brand-title {
 .header__superior {
   display: flex;
   justify-content: space-between;
-  gap: 15px 40px;
+  gap: 8px 40px;
 
 }
 
@@ -108,6 +113,18 @@ a.brand-title {
   .header__superior {
     flex-wrap: wrap-reverse;
     justify-content: start;
+  }
+
+  div.header__inferior {
+    justify-content: start;
+  }
+
+  img.inferior__picture {
+    display: none;
+  }
+
+  header.header {
+    gap: 15px;
   }
 }
 
@@ -183,6 +200,10 @@ a.brand-title {
   .header__inferior {
     flex-wrap: wrap;
     justify-content: center;
+    gap: 8px;
+  }
+  .header {
+    gap: 20px;
   }
 }
 
@@ -193,12 +214,13 @@ a.brand-title {
 }
 
 @media(max-width: 450px) {
-  .inferior__right {
+  div.inferior__right {
     flex-wrap: wrap;
   }
   .inferior__right > * {
     flex: 1;
   }
+
 }
 
 .inferior__picture {
@@ -247,24 +269,23 @@ a.brand-title {
 }
 
 .content {
-  --grey: #808080;
-
   grid-area: content;
   display: grid;
-  gap: 30px 10px;
+  gap: 15px;
   grid-template-areas:
-  'projects announcements'
-  'projects trending';
-  grid-template-columns: 1fr 250px ;
+  'projects aside';
+  grid-template-columns: 1fr 240px ;
   padding: 30px 20px;
   overflow: auto;
   will-change: transform;
 }
 
 
-.projects, .announcements {
+.projects, .aside {
   display: grid;
-  gap: 8px;
+  gap: 10px;
+  align-content: start;
+
 }
 
 .projects {
@@ -272,12 +293,38 @@ a.brand-title {
 }
 
 .grid {
-  
+  display: grid;
+  gap: 20px;
+}
+
+.grid-card {
+  background: var(--white);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.078);
+
+}
+
+.card-content {
+  display: grid;
+  gap: 5px;
+}
+
+.content-top {
+  font-weight: bold;
+  font-size: .9rem;
+}
+
+.content-bottom {
+  font-size: .75rem;
+  line-height: 1.2;
+  color: var(--grey-text);
 }
 
 
-.announcements {
-  grid-area: announcements;
+.aside-cards {
+  display: grid;
+  gap: 30px;
 }
 
 .label {
@@ -288,6 +335,7 @@ a.brand-title {
 hr {
   margin: 0;
 }
+
 .aside-card {
   background-color: var(--white);
   padding: 20px;
@@ -312,12 +360,11 @@ hr {
 .aside-card-text {
   font-size: .7rem;
   line-height: 1.3;
-  color: var(--grey);
+  color: var(--grey-text);
 }
 
 
 .trending {
-  grid-area: trending;
   display: grid;
   gap: 8px;
 }
@@ -330,7 +377,6 @@ hr {
 
 .trending-text {
   display: grid;
-  /* align-content: center; */
   gap: 5px;
 }
 
@@ -339,6 +385,6 @@ hr {
 }
 
 .trending-down {
-  color: var(--grey);
+  color: var(--grey-text);
   font-size: .7rem;
 }
