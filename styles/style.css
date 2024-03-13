@@ -2,7 +2,7 @@
   --grey: #e8eaed;
   --main-color: rgb(91, 180, 194);
   --white: white;
-  --yellow: yellow;
+  --green: #73d159;
   --grey-text: #808080;
 }
 
@@ -141,6 +141,7 @@ a.brand-title {
   height: 25px;
   -webkit-user-drag: none;
   user-select: none;
+  cursor: pointer;
 }
 
 .header__input input{
@@ -186,6 +187,7 @@ a.brand-title {
   font-size: .9rem;
   width: max-content;
   font-weight: bold;
+  cursor: pointer;
 }
 
 
@@ -271,7 +273,7 @@ a.brand-title {
 .content {
   grid-area: content;
   display: grid;
-  gap: 15px;
+  gap: 20px;
   grid-template-areas:
   'projects aside';
   grid-template-columns: 1fr 240px ;
@@ -295,36 +297,54 @@ a.brand-title {
 .grid {
   display: grid;
   gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(min(40vw, 270px), 1fr));
+  grid-auto-rows: minmax(50px, );
 }
 
 .grid-card {
   background: var(--white);
-  border-radius: 10px;
-  padding: 30px;
+  border-radius: 7px;
+  padding: 15px 15px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.078);
-
+  border-left: 8px solid var(--green);
+  display: grid;
+  gap: 15px;
+  align-content: space-between;
 }
 
 .card-content {
   display: grid;
-  gap: 5px;
+  gap: 10px;
 }
 
 .content-top {
   font-weight: bold;
   font-size: .9rem;
+  cursor: pointer;
 }
 
 .content-bottom {
   font-size: .75rem;
-  line-height: 1.2;
+  line-height: 1.4;
   color: var(--grey-text);
+}
+
+.card-icons {
+  display: flex;
+  justify-content: end;
+  gap: 15px;
+}
+
+.card-img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
 }
 
 
 .aside-cards {
   display: grid;
-  gap: 30px;
+  gap: 20px;
 }
 
 .label {
@@ -339,7 +359,7 @@ hr {
 .aside-card {
   background-color: var(--white);
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 7px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.168);
 
   display: grid;
@@ -359,7 +379,7 @@ hr {
 
 .aside-card-text {
   font-size: .7rem;
-  line-height: 1.3;
+  line-height: 1.5;
   color: var(--grey-text);
 }
 
@@ -382,6 +402,7 @@ hr {
 
 .trending-up {
   font-size: .9rem;
+  cursor: pointer;
 }
 
 .trending-down {
