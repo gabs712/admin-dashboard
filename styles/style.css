@@ -1,8 +1,8 @@
 :root {
   --grey: #e8eaed;
-  --main-color: rgb(91, 180, 194);
+  --main-color: rgb(33 185 209);
   --white: white;
-  --green: #73d159;
+  --green: #57de32;
   --grey-text: #808080;
 }
 
@@ -70,8 +70,8 @@ img {
   gap: 13px;
 }
 
-div .brand {
-  gap: 10px;
+div.brand {
+  gap: 5px;
 }
 
 div .brand-logo {
@@ -261,8 +261,6 @@ a.brand-title {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-
-
 }
 
 .inferior__right {
