@@ -3,7 +3,8 @@
   --main-color: rgb(33 185 209);
   --white: white;
   --green: #57de32;
-  --grey-text: #808080;
+  --grey-text: #5f5f5f;
+  --sidebar-items: #ffffff
 }
 
 body {
@@ -93,11 +94,11 @@ a.brand-title {
 .icon {
   width: 23px;
   height: 23px;
-  fill: var(--white);
+  fill: var(--sidebar-items);
 }
 
 .description {
-  color: var(--white);
+  color: var(--sidebar-items);
   text-decoration: none;
   font-weight: bold;
 }
