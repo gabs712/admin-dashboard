@@ -4,7 +4,7 @@
   --white: white;
   --green: #57de32;
   --grey-text: #5f5f5f;
-  --sidebar-items: #ffffff
+  --sidebar-items: #ffffff;
 }
 
 body {
@@ -18,6 +18,10 @@ p {
 
 svg, img {
   flex: none;
+}
+
+img {
+  background: var(--green);
 }
 
 .wrapper {
